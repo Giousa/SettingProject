@@ -2,6 +2,7 @@ package com.zmm.module_setting.act;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.zmm.module_setting.R;
@@ -18,6 +19,7 @@ public class TwSettingActivity extends TwBaseActivity{
 
     private final String TAG = TwSettingActivity.class.getSimpleName();
     private RelativeLayout mUserEdit,mResetPassword,mReportTitle,mAbout,mLogout;
+    private ImageView mTitleQuit;
 
 
     @Override
@@ -32,6 +34,7 @@ public class TwSettingActivity extends TwBaseActivity{
         mReportTitle = (RelativeLayout) findViewById(R.id.rl_report_title);
         mAbout = (RelativeLayout) findViewById(R.id.rl_about);
         mLogout = (RelativeLayout) findViewById(R.id.rl_logout);
+        mTitleQuit = (ImageView) findViewById(R.id.title_iv_quit);
 
 //        mUserEdit.setOnClickListener(this);
 //        mResetPassword.setOnClickListener(this);
@@ -67,6 +70,13 @@ public class TwSettingActivity extends TwBaseActivity{
             @Override
             public void onClick(View v) {
                 startActivity(TwLogOutActivity.class,false);
+            }
+        });
+
+        mTitleQuit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

@@ -38,5 +38,9 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
-    compile project(':module_common')
+    if (isModule.toBoolean()) {
+        compile project(':module_common')
+    }else {
+        compile 'com.android.support:appcompat-v7:25.3.0'
+    }
 }

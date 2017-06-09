@@ -10,7 +10,8 @@
         android:theme="@style/TWSettingTheme">
 
         <activity android:name=".act.TwSettingActivity"
-                  android:theme="@style/TWTranslucentTheme">
+                  android:theme="@style/TWTranslucentTheme"
+            android:launchMode="singleTask">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
